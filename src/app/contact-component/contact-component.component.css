@@ -1,0 +1,84 @@
+.intro-section{
+    height: 200px;
+    background-image: url('/images/person.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    display: flex;
+    align-items: center;
+}
+
+.intro-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: #2863a35d;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.route-container{
+    color: white;
+    z-index: 1;
+}
+
+
+.route-row{
+    display: flex;
+}
+
+.button-25 {
+    background-color: #A1E3F9;
+    background-image: linear-gradient(#A1E3F9, #A1E3F9);
+    border: 1px solid #2A8387;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+    color: black;
+    cursor: pointer;
+    display: block;
+    font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    line-height: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 11px 15px 12px;
+    text-align: center;
+    transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+  }
+  
+  .button-25:hover {
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+    text-decoration: none;
+    transition-duration: .15s, .15s;
+  }
+  
+  .button-25:active {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+  }
+  
+  .button-25:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+  }
+  
+  .button-25:disabled:active {
+    pointer-events: none;
+  }
+  
+  .button-25:disabled:hover {
+    box-shadow: none;
+  }
+
+  .form-control{
+    padding: 14px;
+    border-radius: 2px;
+  }

@@ -1,0 +1,74 @@
+<div class="intro-section">
+    <div class="container-xl route-container">
+        <div class="row">
+            <div class="col">
+                <p class="h4">SERVICES</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col route-row">
+                <p class="h5 me-2"><a routerLink="home">HOME</a></p><p class="h5"> > </p><p class="h5 ms-2"><a routerLink="services">ERVICES</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="service-section">
+    <div class="container-xl pt-2 pb-2">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col">
+                        <p class="h4 service-text">Health and Allied Services</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul *ngFor="let service of HealthandAlliedServices">
+                            <li>
+                                <i class="fa-solid fa-circle-arrow-right"></i> {{service.service}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col">
+                        <p class="h4 service-text">Nursing, Paramedical & Allied Services</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul *ngFor="let service of AlliedServices">
+                            <li>
+                                <i class="fa-solid fa-circle-arrow-right"></i> {{service.service}}
+                                <div *ngIf="service.sub">
+                                    <ul *ngFor="let sub of service.sub">
+                                        <li><i class="fa-solid fa-circle-arrow-right"></i> {{sub.service}}</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col">
+                        <p class="h4 service-text">Utilities & Allied Services</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul *ngFor="let service of UtilitiesServices">
+                            <li>
+                                <i class="fa-solid fa-circle-arrow-right"></i> {{service.service}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

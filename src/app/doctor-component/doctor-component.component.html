@@ -1,0 +1,144 @@
+<div class="intro-section">
+    <div class="container-xl route-container">
+        <div class="row">
+            <div class="col">
+                <p class="h4">About Doctor</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col route-row">
+                <p class="h5 me-2"><a routerLink="home">Home</a></p><p class="h5"> > </p><p class="h5 ms-2"><a routerLink="doctor">Doctor</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="doctor-section">
+    <div class="container-xl pt-4 pb-4">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="image-div">
+                            <img src="/images/doctor.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col">
+                        <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">Make Appoinment</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col">
+                        <p class="h4">{{singleDoctor.name}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="fs-6"><b>Position</b> - {{singleDoctor.position}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="fs-6"><b>Specialty</b> - {{singleDoctor.specialty}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="fs-6"><b>Degree</b> - {{singleDoctor.degree}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="fs-6" style="text-align: justify;" [innerHTML]="setDescription(singleDoctor.about)"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog custom-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Make Appoinment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col">
+                      <p class="h6">Personal Info</p>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Email<span style="color:red">*</span></label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Name<span style="color:red">*</span></label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Phone</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col">
+                      <p class="h6">Appoinment Info</p>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Department</label>
+                      <select class="form-select">
+                        <option>--Select--</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Doctor</label>
+                      <select class="form-select">
+                        <option>--Select--</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Date</label>
+                      <input type="date" class="form-control">
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-primary b-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

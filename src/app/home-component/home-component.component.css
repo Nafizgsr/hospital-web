@@ -1,0 +1,244 @@
+.carousel-container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.info-container{
+    position: relative;
+    top:-100px;
+    bottom:-80px;
+}
+
+.carousel-image{
+    width: 100%;
+    height: 800px;
+}
+
+.carousel-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bold-text{
+    font-weight: bold;
+    color: #3674B5;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+.e-card{
+    color: #3674B5;
+}
+
+.department-section{
+    min-height: 380px;
+    background-color: #3674B5;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.department-card{
+    background-color: #2863a3;
+    color:#fff;
+}
+
+.d-header{
+    display: flex;
+    align-items: center;
+}
+
+.d-body{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.button-25 {
+  background-color: #A1E3F9;
+  background-image: linear-gradient(#A1E3F9, #A1E3F9);
+  border: 1px solid #2A8387;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+  color: black;
+  cursor: pointer;
+  display: block;
+  font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 17px;
+  line-height: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 11px 15px 12px;
+  text-align: center;
+  transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 250px;
+}
+
+.button-25:hover {
+  box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+  text-decoration: none;
+  transition-duration: .15s, .15s;
+}
+
+.button-25:active {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+}
+
+.button-25:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+.button-25:disabled:active {
+  pointer-events: none;
+}
+
+.button-25:disabled:hover {
+  box-shadow: none;
+}
+
+.d-h2{
+    color: #ffff;
+}
+
+.doctor-card{
+    cursor: pointer;
+}
+
+.card-img-top{
+    height: 250px;
+}
+
+.appoinment-section{
+    min-height: 500px;
+    background-image: url('/images/appoinment.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+.appoinment-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 500px;
+    background-color: #2863a35d;
+}
+
+.appoinment-card{
+    width:900px;
+}
+
+.a-h2{
+    color: #ffff;
+    z-index: -1;
+}
+
+.appoinment-card{
+    display: flex;
+    justify-content: center;
+}
+
+.appoinment-section{
+    display: flex;
+    align-items: center;
+}
+
+.mcol{
+    display: flex;
+}
+
+.form-label{
+    min-width: 100px;
+    margin-top: 10px;
+}
+
+.services-section{
+    background-color: #A1E3F9;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.card-grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.service-card{
+    background-color: #578FCA;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.service-card:hover{
+    background-color: #3674B5;
+}
+
+.about-section{
+    min-height: 300px;
+    background-image: url('/images/person.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    display: flex;
+    align-items: center;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 300px;
+    background-color: #2863a35d;
+}
+
+.about-center{
+    display: flex;
+    justify-content: center;
+    color:white;
+    z-index: 1;
+    border-right: 3px solid white;
+}
+
+.about-center-no-border{
+    border-right: none !important;
+}
+
+.about-icon{
+    font-size: 50px;
+}
+
+.info-center{
+    display: flex;
+    justify-content: center;
+    color:#3674B5;
+    z-index: 1;
+    border-right: 3px solid #3674B5;
+}
+
+.info-center-no-border{
+    border-right: none !important;
+}
+
+.info-icon{
+    font-size: 30px;
+}
+
+.info-card{
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

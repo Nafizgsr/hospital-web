@@ -1,0 +1,57 @@
+.intro-section{
+    height: 200px;
+    background-image: url('/images/person.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment:fixed;
+    display: flex;
+    align-items: center;
+}
+
+.intro-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: #2863a35d;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.route-container{
+    color: white;
+    z-index: 1;
+}
+
+
+.route-row{
+    display: flex;
+}
+
+.department-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px;
+    padding: 10px;
+}
+
+.department-card{
+    background-color: #2863a3;
+    color:#fff;
+}
+
+/* testing cloudflare blanch */
+
+.d-header{
+    display: flex;
+    align-items: center;
+}
+
+.d-body{
+    display: flex;
+    justify-content: center;
+}

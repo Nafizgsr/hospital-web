@@ -1,0 +1,36 @@
+<div class="intro-section">
+    <div class="container-xl route-container">
+        <div class="row">
+            <div class="col">
+                <p class="h4">DEPARTMENTS</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col route-row">
+                <p class="h5 me-2"><a routerLink="home">HOME</a></p><p class="h5"> > </p><p class="h5 ms-2"><a routerLink="departments">DEPARTMENTS</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="department-section">
+    <div class="container-xl">
+        <div class="department-card-container">
+            <div class="card department-card" *ngFor="let department of departments">
+                <h5 class="card-header"><i class="fa-solid" [ngClass]="department.icon"></i> {{department.name}}</h5>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <p class="card-text">{{department.details}}</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col" style="display: flex; justify-content: center;">
+                      <button class="btn btn-primary" (click)="openDepartmentDetails(department.name)">More Info</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

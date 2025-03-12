@@ -1,0 +1,149 @@
+<div class="intro-section">
+    <div class="container-xl route-container">
+        <div class="row">
+            <div class="col">
+                <p class="h4"><i class="fa-solid" [ngClass]="department.icon"></i> {{department.name}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col route-row">
+                <p class="h5 me-2"><a routerLink="departments">DEPARTMENTS</a></p><p class="h5"> > </p><p class="h5 ms-2"><a routerLink="departments">DEPARTMENT</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="doctor-section">
+    <div class="container-xl mt-3">
+        <div class="row">
+            <div class="col">
+                <p class="h2">Our <span class="bold-text">Doctors</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="doctor-grid">
+                    <div class="card" *ngFor="let doctor of filteredDoctors">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="/images/doctor.jpg" class="img-fluid rounded-start" alt="Doctor">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ doctor.name }}</h5>
+                                        <p class="card-text">{{ doctor.position }}</p>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="display: flex;">
+                                    <button class="d-btn btn btn-primary ms-2 me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-briefcase-medical"></i> Make Appoinment</button>
+                                    <button class="d-btn btn btn-primary" (click)="openDoctorDetails(doctor.id)"><i class="fa-solid fa-circle-info"></i> More Details</button>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="about-department-section">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col">
+                <p class="h2">About Department of <span class="bold-text">{{department.name}} <i class="fa-solid" [ngClass]="department.icon"></i></span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="fs-6" style="text-align: justify;" [innerHTML]="setDescription(department.details)"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog custom-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Make Appoinment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col">
+                      <p class="h6">Personal Info</p>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Email<span style="color:red">*</span></label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Name<span style="color:red">*</span></label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Phone</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col">
+                      <p class="h6">Appoinment Info</p>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Department</label>
+                      <select class="form-select">
+                        <option>--Select--</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Doctor</label>
+                      <select class="form-select">
+                        <option>--Select--</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Date</label>
+                      <input type="date" class="form-control">
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-primary b-button">Book Now</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

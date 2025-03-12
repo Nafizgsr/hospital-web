@@ -1,0 +1,408 @@
+<div class="main-container">
+  <div class="carousel-container">
+    <ngx-slick-carousel #slickModal="slick-carousel" [config]="myConfig">
+        <div class="carousel-image" ngxSlickItem *ngFor="let i of myImages">
+            <img [src]="i.src">
+        </div>
+    </ngx-slick-carousel>
+  </div>
+
+  <div class="info-container">
+    <div class="container-xl">
+      <div class="card info-card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="row">
+                <div class="col info-center">
+                  <i class="fa-solid fa-user-doctor info-icon"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col info-center">
+                  <p class="h3">Online Appointment</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col info-center">
+                  <p>Book Online Appointment </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="row">
+                <div class="col info-center">
+                  <i class="fa-solid fa-truck-medical info-icon"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col info-center">
+                  <p class="h3">Ambulance</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col info-center">
+                  <p>Ambulance service all over the country</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="row">
+                <div class="col info-center">
+                  <i class="fa-solid fa-clock info-icon"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col info-center">
+                  <p class="h3">24/7 Emergency</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col info-center">
+                  <p>All-time emergency department</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="row">
+                <div class="col info-center info-center-no-border">
+                  <i class="fa-solid fa-bed info-icon"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col info-center info-center-no-border">
+                  <p class="h3">80+ Beds</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col info-center info-center-no-border">
+                  <p>80+ bed facilities including ICU</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xl mission-section">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-header">
+            Welcome to <span class="bold-text">Hospital Web</span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Get a world class Health service</h5>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+               a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
+                also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                 with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                  software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                Our <span class="bold-text">Mission</span>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+                   a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-1">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                Our <span class="bold-text">Vission</span>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+                   a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <img src="/images/ambulance.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title e-card">Emergency</h4>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+               Lorem Ipsum has been the industry's standard dummy, when an unknown printer took
+                a galley of type and scrambled it to make a type specimen book.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="department-section mt-2">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col">
+          <p class="h2 d-h2">Hospital Web​ Departments</p>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col">
+          <p-carousel [value]="departments" [numVisible]="3" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" autoplayInterval="3000">
+            <ng-template let-department #item>
+              <div class="card department-card m-1">
+                <h5 class="card-header"><i class="fa-solid" [ngClass]="department.icon"></i> {{department.name}}</h5>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <p class="card-text">{{department.details}}</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col" style="display: flex; justify-content: center;">
+                      <button class="btn btn-primary" (click)="openDepartmentDetails(department.name)">More Info</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+        </p-carousel>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col" style="display: flex; justify-content: end;">
+          <button class="button-25" role="button" routerLink="/departments">VIEW ALL DEPARTMENTS</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="doctor-section mt-2">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col text-center">
+          <p class="h2">Meet Our <span class="bold-text">Doctors</span></p>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col">
+          <p-carousel [value]="doctors" [numVisible]="4" [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions" autoplayInterval="3000">
+            <ng-template let-doctor #item>
+              <div class="card doctor-card m-1" (click)="openDoctorDetails(doctor.id)">
+                <img src="/images/doctor.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <p class="h5">{{doctor.name}}</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <p class="lead">{{doctor.position}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+        </p-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="appoinment-section mt-2">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col text-center">
+          <p class="h2 a-h2">Make An Appoinment</p>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col appoinment-card">
+          <div class="card appoinment-card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col">
+                      <p class="h4">Personal Info</p>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Email<span style="color:red">*</span></label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Name<span style="color:red">*</span></label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Phone</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col">
+                      <p class="h4">Appoinment Info</p>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Department</label>
+                      <select class="form-select">
+                        <option>--Select--</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Doctor</label>
+                      <select class="form-select">
+                        <option>--Select--</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col mcol">
+                      <label class="form-label">Date</label>
+                      <input type="date" class="form-control">
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col d-flex justify-content-center">
+                      <button class="btn btn-primary me-1">Book</button>
+                      <button class="btn btn-primary ms-1">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="services-section pt-2 pb-2">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col text-center">
+          <p class="h2">Our <span class="bold-text">Services & Facilities</span></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card-grid">
+            <div class="card service-card" *ngFor="let service of services" routerLink="/services">
+              <div class="card-body text-center">
+                <p class="h4"><i class="fa-solid me-2" [ngClass]="service.icon"></i>{{service.name}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+<div class="about-section">
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="row">
+          <div class="col about-center">
+            <i class="fa-regular fa-briefcase-medical about-icon"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col about-center">
+            <p class="h1">{{departments.length}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col about-center">
+            <p class="h2">Departments</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="row">
+          <div class="col about-center">
+            <i class="fa-solid fa-user-doctor about-icon"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col about-center">
+            <p class="h1">{{doctors.length}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col about-center">
+            <p class="h2">Doctors</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="row">
+          <div class="col about-center">
+            <i class="fa-solid fa-user-nurse about-icon"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col about-center">
+            <p class="h1">100</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col about-center">
+            <p class="h2">Nurses</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="row">
+          <div class="col about-center about-center-no-border">
+            <i class="fa-solid fa-bed about-icon"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col about-center about-center-no-border">
+            <p class="h1">1000+</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col about-center about-center-no-border">
+            <p class="h2">Happy Patient's</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

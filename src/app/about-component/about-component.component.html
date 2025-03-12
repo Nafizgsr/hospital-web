@@ -1,0 +1,117 @@
+<div class="intro-section">
+    <div class="container-xl route-container">
+        <div class="row">
+            <div class="col">
+                <p class="h4">ABOUT HOSPITAL WEB</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col route-row">
+                <p class="h5 me-2"><a routerLink="home">HOME</a></p><p class="h5"> > </p><p class="h5 ms-2"><a routerLink="about">ABOUT US</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="about-section mt-2">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="row">
+                    <div class="col">
+                        <p class="h3" style="color: #3674B5;">Hospital Web</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="h4">Get a world class Health service</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="fs-6" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                             It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                              PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+                                including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 image-col">
+                <div class="row">
+                    <div class="col">
+                        <div class="image-div">
+                            <img src="/images/hospital1.jpg" alt="Hospital" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mission-section mt-2">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col">
+                        <p class="h3" style="color: #3674B5;">Our Mission</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="fs-6" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                             PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col">
+                        <p class="h3" style="color: #3674B5;">Our Vission</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="fs-6" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                             PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="doctors-section">
+    <div class="container-xl">
+        <div class="row mt-2">
+            <div class="col">
+                <p class="h1 director-text">Board of Directors</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="director-card-container">
+                    <div class="card" *ngFor="let director of boardOfDirectors">
+                        <img src="/images/director.jpg" class="card-img-top" alt="Doctor">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col">
+                              <p class="h5">{{ director.name }}</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <p class="lead">{{ director.position }}</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
