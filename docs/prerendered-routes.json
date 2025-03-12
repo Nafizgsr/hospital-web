@@ -1,0 +1,13 @@
+{
+  "routes": {
+    "/hospital-web": {},
+    "/hospital-web/about": {},
+    "/hospital-web/contact": {},
+    "/hospital-web/department": {},
+    "/hospital-web/departments": {},
+    "/hospital-web/doctor": {},
+    "/hospital-web/doctors": {},
+    "/hospital-web/home": {},
+    "/hospital-web/services": {}
+  }
+}
