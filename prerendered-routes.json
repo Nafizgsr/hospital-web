@@ -1,0 +1,13 @@
+{
+  "routes": {
+    "/Nafizgsr/hospital-web": {},
+    "/Nafizgsr/hospital-web/about": {},
+    "/Nafizgsr/hospital-web/contact": {},
+    "/Nafizgsr/hospital-web/department": {},
+    "/Nafizgsr/hospital-web/departments": {},
+    "/Nafizgsr/hospital-web/doctor": {},
+    "/Nafizgsr/hospital-web/doctors": {},
+    "/Nafizgsr/hospital-web/home": {},
+    "/Nafizgsr/hospital-web/services": {}
+  }
+}
